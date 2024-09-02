@@ -1,0 +1,113 @@
+body{
+    margin: 0
+  }
+  .wheel{
+    position: absolute;
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 50vw;
+    height: 50vw;
+    margin-left: 50px;
+    max-width: 500px;
+    max-height: 500px;
+    animation-name: wheel;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+  }
+  .line{
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+  }
+  .line:nth-of-type(2){
+    transform-origin: 0% 0%;
+    transform: rotate(60deg)
+  }
+  .line:nth-of-type(3){
+    transform-origin: 0% 0%;
+    transform: rotate(120deg)
+  }
+  .line:nth-of-type(4){
+    transform-origin: 0% 0%;
+    transform: rotate(180deg)
+  }
+  .line:nth-of-type(5){
+    transform-origin: 0% 0%;
+    transform: rotate(240deg)
+  }
+  .line:nth-of-type(6){
+    transform-origin: 0% 0%;
+    transform: rotate(300deg)
+  }
+  .spins{
+    background-color: red;
+    height: 20%;
+    width: 20%;
+    position: absolute;
+    transform-origin: 50% 0%;
+    border: 2px solid black;
+    animation: spins 10s ease-in-out infinite;
+  }
+  .spins:nth-of-type(1){
+    right: -8.7%;
+    top: 50%;
+  }
+  .spins:nth-of-type(2){
+    right:17%;
+    top: 93.7%;
+  }
+  .spins:nth-of-type(3){
+    
+    right: 67%;
+    top: 93.7%;
+  }
+  .spins:nth-of-type(4){
+    left: -8.7%;
+    top: 50%;
+  }
+  .spins:nth-of-type(5){
+    left: 17%;
+    top: 7%
+  }
+  .spins:nth-of-type(6){
+    right: 17%;
+    top: 7%
+  }
+  
+  @keyframes wheel{
+    0%{
+      transform: rotate(0deg)
+    }
+      
+    100%{
+      
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes spins{
+    0%{
+      
+      transform: rotate(0deg)
+    }
+    25%{
+      background-color: yellow;
+    }
+    50%{
+      background-color: purple;
+      
+    }
+    75%{
+      background-color: yellow;
+     
+    }
+    100%{
+      
+      transform: rotate(-360deg);
+    }
+  }
+  
+  
